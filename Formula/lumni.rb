@@ -4,17 +4,17 @@ class Lumni < Formula
 
   # Define the base URL and commit hash as variables
   base_url = "https://github.com/serverlessnext/lumni/releases/download"
-  release_tag = "628a063"
+  release_tag = "256d744"
 
   if OS.mac? && Hardware::CPU.intel?
     url "#{base_url}/#{release_tag}/lumni-x86_64-apple-darwin-#{release_tag}.tar.gz"
-    sha256 "19641cba27d6039fd23f9b887a4cf3833b8b1b0bee3a1c42f116790eb576721f"
+    sha256 "c1566f27be3a37a4317ced396e7d4a51355caa8d38ec45379e92d22e4e992aef"
   elsif OS.mac? && Hardware::CPU.arm?
     url "#{base_url}/#{release_tag}/lumni-aarch64-apple-darwin-#{release_tag}.tar.gz"
-    sha256 "ac697fc5c3e4b1983185ea7ebb42236023e23e119428828c6507e5e895749103"
+    sha256 "b56f930a70a0ae5b75c6d2b8b0bc0cf8bffffd523a93c20c72c39378f9b9b496"
   elsif OS.linux && Hardware::CPU.intel?
     url "#{base_url}/#{release_tag}/lumni-x86_64-unknown-linux-gnu-#{release_tag}.tar.gz"
-    sha256 "8d40564a4bd5a29b654297cbdf522d7a99d31f153d346b85e6398fb42e19f799"
+    sha256 "6ba3134ef66ad400ff622e6b6dd5d1a968ea55eb43622b6fbf419a8cb2a4e69e"
   end
 
   def install
