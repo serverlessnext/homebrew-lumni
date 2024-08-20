@@ -1,19 +1,19 @@
 class Lumni < Formula
   desc "Lumni CLI"
   homepage "https://github.com/serverlessnext/lumni"
-  release_tag = "2kzgidff"
+  release_tag = "2kzgm7k2"
   version release_tag
   base_url = "https://github.com/serverlessnext/lumni/releases/download/#{release_tag}"
 
   if OS.mac? && Hardware::CPU.intel?
     url "#{base_url}/lumni-x86_64-apple-darwin-#{release_tag}.tar.gz"
-    sha256 "aaeea8d3fcc8f942be93e1a9fab0b15485594b6a30112e7e349fa8509e639c00"
+    sha256 "4af9ae8f303d371392370dfb8eeb117b85d46e1b87142b5dc9d5751f52504008"
   elsif OS.mac? && Hardware::CPU.arm?
     url "#{base_url}/lumni-aarch64-apple-darwin-#{release_tag}.tar.gz"
-    sha256 "1e3a8f228d311fec8df685bb1c49600571c2a85a88db6a87578673dd11ad73f8"
+    sha256 "feb227b5cf75df863fd253f25f8d3fe97f67825ce1bdbecc30cba40ed3fd17fb"
   elsif OS.linux && Hardware::CPU.intel?
     url "#{base_url}/lumni-x86_64-unknown-linux-gnu-#{release_tag}.tar.gz"
-    sha256 "f139a3712660d910ade3f2d773b37971ce686c0a8cf37d5e9dca7cabdc43da3b"
+    sha256 "b1f55b493c1e5a71999fec4e559b55d82eb02d5d94bb21e96a9528f58f4631b0"
   end
 
   def install
